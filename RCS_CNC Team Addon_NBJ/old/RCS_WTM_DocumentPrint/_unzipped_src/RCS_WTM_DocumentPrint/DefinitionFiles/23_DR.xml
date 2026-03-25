@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+  <settings>
+    <useStandardLayout>Y</useStandardLayout>
+    <RTYPCode>QUT2</RTYPCode>
+  </settings>
+	<variables>
+		<variable name="DocEntry" default="-1"></variable>
+	</variables>
+	<queries>
+		<!--For the fields use type as system types: String, Int32, Double, DateTime -->
+		<query dataTableName="Administration">
+			<sql>
+				<![CDATA[Select  isnull(CompnyName,'')as CompnyName, 
+						isnull(ad.Street, '') as Street, 
+						isnull(ad.StreetF, '') as StreetF, 
+						isnull(ad.Block, '') as Block, 
+						isnull(ad.BlockF, '') as BlockF, 
+						isnull(ad.City, '') as City,
+						isnull(ad.CityF, '') as CityF, 
+						isnull(ad.ZipCode, '') as ZipCode,
+						isnull(ad.ZipCodeF, '') as ZipCodeF, 
+						isnull(ad.County, '') as County,
+						isnull(ad.CountyF, '') as CountyF,
+						isnull(Phone1, '') as Phone1,
+						isnull(Phone1F, '') as Phone1F,
+						isnull(Phone2, '') as Phone2,
+						isnull(Phone2F, '') as Phone2F,
+						isnull(Fax, '') as Fax,
+						isnull(FaxF, '') as FaxF,
+						isnull(E_Mail, '') as E_Mail,
+						isnull(IntrntAdrs, '') as WWW,
+						isnull(TaxIdNum, '') as TaxIdNum,
+						isnull(TaxIdNum2, '') as TaxIdNum2,
+						isnull(TaxIdNum3, '') as TaxIdNum3,
+						isnull(FreeZoneNo, '') as FreeZoneNo,
+						isnull(PBSNumber, '') as PBSNumber,
+						isnull(PBSNumber, '') as PBSNumber,
+						isnull(PBSGroupNo, '') as PBSGroupNo
+						from OADM left join ADM1 ad on 
+						isnull(ad.CurrPeriod, 'a') = isnull(OADM.CurrPeriod, 'a')]]>
+			</sql>
+		</query>
+		<query dataTableName="Banking">
+			<sql>
+				<![CDATA[Select isnull(D.Account, '') as Account, 
+						isnull(D.Branch, '') as  Branch 
+						from [DSC1] D 
+						left join ODSC O on O.AbsEntry = D.BankKey 
+						left join OADM A on A.DflBnkKey = O.AbsEntry]]>
+			</sql>
+		</query>
+
+		<query dataTableName="Document">
+			<sql>
+				<![CDATA[SELECT OINV.DocEntry, OINV.DocNum, OINV.DocType, 
+				OINV.DocDate, OCTG.PymntGroup, 
+				OINV.DocDueDate, OINV.CardCode, OINV.CardName, 
+                ISNULL(OCPR.Name, '') AS ContactPerson, 
+				ISNULL(OCRD.U_AIG_EAN, '') AS 'EAN no.',
+				OINV.Address, 
+				ISNULL(OINV.NumAtCard, '') AS NumAtCard, OINV.VatPercent, OINV.VatSum, 
+                OINV.VatSumFC, OINV.DiscPrcnt, OINV.DiscSum, OINV.DiscSumFC, 
+				OINV.DocCur, OINV.DocRate, OINV.DocTotal, OINV.DocTotalFC, 
+                ISNULL(OINV.Comments, '') AS Comments, 
+				ISNULL(OINV.FatherCard, '') AS FatherCard, 
+				OINV.TotalExpns, 
+				OINV.TotalExpFC, 
+                ISNULL(OINV.PaymentRef, '') AS PaymentRef,
+				ISNULL(OSLP.SlpName, '') AS SalesPerson,
+				ISNULL(P.U_Name, '') AS CaseName,
+				ISNULL(OINV.Header, '') AS Header, 
+				ISNULL(OINV.Footer, '') AS Footer
+				FROM OINV 
+				INNER JOIN OCRD ON OCRD.CardCode = OINV.CardCode 
+				LEFT OUTER JOIN OCTG ON OCTG.GroupNum = OINV.GroupNum 
+				LEFT OUTER JOIN OCPR ON OCPR.CntctCode = OINV.CntctCode 
+				AND OCPR.CardCode = OINV.CardCode 
+				LEFT OUTER JOIN OSLP ON OSLP.SlpCode = OINV.SlpCode
+				LEFT OUTER JOIN "@RCS_WTM_PROJECTS" P on P.U_SAPInvoiceNr = OINV.DocEntry
+				WHERE OINV.DocEntry = [#DocEntry]]]>
+			</sql>
+		</query>
+
+		<query dataTableName="DocumentLines">
+			<sql>
+				<![CDATA[select * from (select AftLineNum as LineNum, OrderNum, LineType,
+                      convert(nvarchar(MAX), LineText) as LineText, 
+                      '' as ItemCode, '' as Dscription, 0 as Quantity, 
+                      0 as DiscPrcnt, ''as Currency, '' as FreeTxt, 0 as TotInclTax,
+                      0 as Price, 0 as LineTotal, 0 as TotalFrgn, '19000101' as ShipDate
+                      from [INV10]
+					            join OINV on OINV.DocEntry = INV10.DocEntry
+                      where OINV.DocEntry = [#DocEntry]
+                      union 
+                      select LineNum, 0 as OrderNum, 'Line' as LineType,'LineTable' as LineText, 
+                      ItemCode, isnull(Dscription, '') as Dscription, Quantity, 
+                      INV1.DiscPrcnt, Currency, isnull(FreeTxt, ''), TotInclTax, 
+                      Price, LineTotal, TotalFrgn, ShipDate
+                      from [INV1]
+					            join OINV on OINV.DocEntry = INV1.DocEntry
+                      where OINV.DocEntry = [#DocEntry]
+                      ) tmp order by LineNum, OrderNum]]>
+			</sql>
+		</query>
+	</queries>
+
+</document>

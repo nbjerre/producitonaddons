@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PrintObjects>
+  <Object name="" objectCode="xxx" alias=""></Object>
+  <!--<Object name="Ordre liste" objectCode="55" alias="OrderList" overwriteCopy="Y" useExtendedVariables="Y" openInNewWindow="Y"></Object>
+  <Object name="Dynamic picture" objectCode="1345" alias="Dynamic" overwriteCopy="Y"></Object>
+  <Object name="Salgs ordre" objectCode="17" alias="17_CNC" overwriteCopy="Y"></Object>
+  -->
+  <Object name="Følgeseddel SO" objectCode="17_2" alias="17_2_CNC" overwriteCopy="Y"></Object>
+  <Object name="Følgeseddel" objectCode="15" alias="15_CNC" overwriteCopy="Y"></Object>
+  <!--
+  <Object name="Tilbud" objectCode="23" alias="23_CNC" overwriteCopy="Y"></Object>
+  <Object name="Udgående Faktura" objectCode="13" alias="13_CNC" overwriteCopy="Y"></Object>
+  <Object name="Udgående Kreditnota" objectCode="14" alias="14_CNC" overwriteCopy="Y"></Object>
+  -->
+  <Object name="Produktion ordre" objectCode="10004" alias="WOR10004_CNC" overwriteCopy="Y"></Object>
+  
+</PrintObjects> 

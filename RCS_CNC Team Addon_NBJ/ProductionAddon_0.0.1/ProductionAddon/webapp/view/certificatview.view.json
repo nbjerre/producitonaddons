@@ -1,0 +1,32 @@
+{
+  "guid": "certificatview-guid-001",
+  "controller": "SAPB1.ProductionAddon.ProductionAddon.controller.certificatviewController",
+  "content": [
+    {
+      "guid": "certificatview-grid",
+      "ctrlType": "b1.sdk.Grid",
+      "selectionMode": "Multiple",
+      "rows": "{@@data>/certificates}",
+      "columns": [
+        {
+          "guid": "col-status",
+          "ctrlType": "b1.sdk.Column",
+          "label": "{@@i18n>certificateColumnStatus}",
+          "value": "{statusLabel}"
+        },
+        {
+          "guid": "col-cerno",
+          "ctrlType": "b1.sdk.Column",
+          "label": "{@@i18n>certificateColumnNumber}",
+          "value": "{CerNo}"
+        },
+        {
+          "guid": "col-name",
+          "ctrlType": "b1.sdk.Column",
+          "label": "{@@i18n>certificateColumnName}",
+          "value": "{CerName}"
+        }
+      ]
+    }
+  ]
+}

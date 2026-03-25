@@ -1,0 +1,56 @@
+{
+  "guid": "PrnPdfDlg0000000000001",
+  "type": "Complex",
+  "controller": "SAPB1.ProductionAddon.ProductionAddon.controller.printpdfdialogDialog",
+  "title": "{@@i18n>printPdfDialogTitle}",
+  "contentWidth": "560px",
+  "contentHeight": "240px",
+  "tabs": [
+    {
+      "guid": "PrnPdfSect000000000001",
+      "ctrlType": "b1.sdk.Section",
+      "text": "{@@i18n>printPdfDialogSectionTitle}",
+      "subSections": [
+        {
+          "guid": "PrnPdfSubS000000000001",
+          "ctrlType": "b1.sdk.SubSection",
+          "groups": [
+            {
+              "guid": "PrnPdfGroup00000000001",
+              "ctrlType": "b1.sdk.Group",
+              "items": [
+                {
+                  "guid": "PrnPdfInfo000000000001",
+                  "ctrlType": "b1.sdk.StaticText",
+                  "value": "{@@i18n>printPdfDialogInfo}"
+                },
+                {
+                  "guid": "PrnPdfMsg0000000000001",
+                  "ctrlType": "b1.sdk.StaticText",
+                  "value": "{@@data>message}"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "guid": "PrnPdfCopy000000000001",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>printPdfDialogCopyLink}",
+      "icon": "sap-icon://copy",
+      "buttonType": "Emphasized",
+      "press": { "procName": "onCopyLink" }
+    },
+    {
+      "guid": "PrnPdfClose00000000001",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>commonClose}",
+      "buttonType": "Transparent",
+      "press": { "procName": "onClose" }
+    }
+  ]
+}

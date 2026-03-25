@@ -1,0 +1,74 @@
+{
+  "version": "1.0.0",
+  "name": "SAPB1.ProductionAddon.ProductionAddon",
+  "description": "SAPBusinessOne WebClient UI API extension created by Visual Studio Code",
+  "b1.bundles": [
+    {
+      "id": "Sales.layout",
+      "baseViewGuid": "2Jx8aiyfYXojYjGBy5rr8X",
+      "layout": "layout/Sales.layout.json",
+      "description": "Sales",
+      "i18n": {
+        "@@i18n": [
+          "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+        ]
+      }
+    },
+    {
+      "id": "productiondialog.dialog",
+      "view": "dialog/productiondialog.dialog.json",
+      "i18n": {
+        "@@i18n": [
+          "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+        ]
+      }
+    },
+    {
+      "id": "certificat.dialog",
+      "view": "dialog/certificat.dialog.json",
+      "i18n": {
+        "@@i18n": [
+          "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+        ]
+      }
+    },
+    {
+  "id": "copyroutedialog.dialog",
+  "view": "dialog/copyroutedialog.dialog.json",
+  "i18n": {
+    "@@i18n": [
+      "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+    ]
+  }
+},
+    {
+      "id": "certificatdialog.dialog",
+      "view": "dialog/certificatdialog.dialog.json",
+      "i18n": {
+        "@@i18n": [
+          "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+        ]
+      }
+    },
+    {
+  "id": "purchasedialog.dialog",
+  "view": "dialog/purchasedialog.dialog.json",
+  "i18n": {
+    "@@i18n": [
+      "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+    ]
+  }
+},
+    {
+  "id": "printpdfdialog.dialog",
+  "view": "dialog/printpdfdialog.dialog.json",
+  "i18n": {
+    "@@i18n": [
+      "SAPB1.ProductionAddon.ProductionAddon.i18n.i18n"
+    ]
+  }
+}
+  ],
+  "allowedExternalURLs": "*",
+  "allowedServiceLayerAPIs": "*"
+}

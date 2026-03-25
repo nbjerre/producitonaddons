@@ -1,0 +1,138 @@
+{
+  "guid": "rTpQJMjGRIOTzKLJdXPXyg",
+  "type": "Complex",
+  "controller": "SAPB1.ProductionAddon.ProductionAddon.controller.purchasedialogDialog",
+  "title": "{@@i18n>purchaseDialogTitle}",
+  "contentWidth": "1100px",
+  "contentHeight": "600px",
+  "tabs": [
+    {
+      "guid": "wKWdVv3nSDaxQWTGh7IVaA",
+      "ctrlType": "b1.sdk.Section",
+      "text": "{@@i18n>purchaseDialogSectionTitle}",
+      "subSections": [
+        {
+          "guid": "XTBtHw5CQVGwl2TRs2ea6w",
+          "ctrlType": "b1.sdk.SubSection",
+          "groups": [
+            {
+              "guid": "M1g0JGTpQP7iq7nkKGzjtA",
+              "ctrlType": "b1.sdk.Group",
+              "items": [
+                {
+                  "guid": "bQj1qGn5S3ePlqtQ2fQsCw",
+                  "ctrlType": "b1.sdk.Grid",
+                  "rowsData": "{@@data>/lines}",
+                  "selectionMode": "Multiple",
+                  "addIndexColumn": true,
+                  "columns": [
+                    {
+                      "guid": "NQs9ND7mQLWb4hmKtUipag",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonSupplier}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "bw3vki4TTHi8qmBA3uazRw",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>SupplierName}"
+                      }
+                    },
+                    {
+                      "guid": "Xlol3e5GSjSVClWrVCpVMw",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonItemNumber}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "5dpdUCSeSteDnLgVaAOvrQ",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>ItemCode}"
+                      }
+                    },
+                    {
+                      "guid": "lh0Uio7YRqm0wqe9ZGSDpQ",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonItemName}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "1fdTByQTT7y5OdmuNgIqBA",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>ItemName}"
+                      }
+                    },
+                    {
+                      "guid": "mBdqaSJ2QhmWgqgpAIA9ug",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonQuantity}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "2wC3cu1DRBOixzfyrUW4Rg",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>PlannedQty}"
+                      }
+                    },
+                    {
+                      "guid": "u42mu6KuR1qwI6w7K9aLow",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonStartDate}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "MuEIzEYmTUqhCSJ2bRFx4w",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>StartDate}"
+                      }
+                    },
+                    {
+                      "guid": "UFYaicCwQxu8CAfOOaDmHQ",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonEndDate}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "TuBIOKjNQj6LPaZzzckCIQ",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>EndDate}"
+                      }
+                    },
+                    {
+                      "guid": "mCs3UIVgT6uAl3aasluqlQ",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonProject}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "1uqK2ACeSYypVwrgavHLKw",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>Project}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "guid": "CO0B56tkT3OyDPQuHtsRbA",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>purchaseDialogCreateOrders}",
+      "icon": "sap-icon://shopping-cart",
+      "buttonType": "Emphasized",
+      "press": { "procName": "onCreatePurchaseOrders" }
+    },
+    {
+      "guid": "r966Fsl4TDOa1x4BRJtkWQ",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>commonSelectAll}",
+      "press": { "procName": "onSelectAll" }
+    },
+    {
+      "guid": "QIYwnDCPSMOBI9HXANbtRg",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>commonClose}",
+      "buttonType": "Transparent",
+      "press": { "procName": "onClose" }
+    }
+  ]
+}

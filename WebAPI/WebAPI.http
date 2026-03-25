@@ -1,0 +1,89 @@
+@WorksheetAPI_HostAddress = http://localhost:5230
+@timeout=300
+
+# hej
+### Get All Worksheets
+GET {{WorksheetAPI_HostAddress}}/api/worksheets
+Accept: application/json
+
+### Get Worksheets by Status (I = In progress, S = Sent)
+GET {{WorksheetAPI_HostAddress}}/api/worksheets?status=I
+Accept: application/json
+
+### Get Worksheet by Number
+GET {{WorksheetAPI_HostAddress}}/api/worksheets/5
+Accept: application/json
+
+### Get Worksheet Lines
+GET {{WorksheetAPI_HostAddress}}/api/worksheets/6/lines
+Accept: application/json
+
+### Get Worksheet Types
+GET {{WorksheetAPI_HostAddress}}/api/worksheets/types
+Accept: application/json
+
+### Get Worksheet Types
+GET {{WorksheetAPI_HostAddress}}/api/Items('i001')
+Accept: application/json
+
+
+###
+
+### PlanUnlimited Health
+GET {{WorksheetAPI_HostAddress}}/api/plan/health
+Accept: application/json
+
+###
+
+### PlanUnlimited Run (example: BtnPR)
+POST {{WorksheetAPI_HostAddress}}/api/plan/run
+Content-Type: application/json
+Accept: application/json
+
+{
+	"btn": "BtnPR",
+	"docEntry":  2577,
+	"lineNum": -1,
+	"prodDocNum": -1,
+	"user": "manager"
+}
+
+###
+
+### PlanUnlimited BtnPR (sales order)
+POST {{WorksheetAPI_HostAddress}}/api/plan/order/btnpr
+Content-Type: application/json
+Accept: application/json
+
+{
+	"docEntry": 2577,
+	"user": "manager"
+}
+
+###
+
+### PlanUnlimited BtnPU (sales order)
+POST {{WorksheetAPI_HostAddress}}/api/plan/order/btnpu
+Content-Type: application/json
+Accept: application/json
+
+{
+	"docEntry": 2577,
+	"user": "manager"
+}
+
+###
+
+### PlanUnlimited BtnPUL (sales order line)
+@requestTimeout=300000
+POST {{WorksheetAPI_HostAddress}}/api/plan/order/btnpul
+Content-Type: application/json
+Accept: application/json
+
+{
+	"docEntry": 2577,
+	"lineNum": 0,
+	"user": "manager"
+}
+
+###

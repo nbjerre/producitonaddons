@@ -1,0 +1,89 @@
+{
+  "guid": "6CyypmvLSmCn1YR1LDDf4Q",
+  "type": "Complex",
+  "controller": "SAPB1.ProductionAddon.ProductionAddon.controller.copyroutedialogDialog",
+  "title": "{@@i18n>copyRouteDialogTitle}",
+  "contentWidth": "600px",
+  "contentHeight": "450px",
+  "tabs": [
+    {
+      "guid": "eohRIJGqS9SCfz2jPxww0Q",
+      "ctrlType": "b1.sdk.Section",
+      "text": "{@@i18n>copyRouteDialogSectionTitle}",
+      "subSections": [
+        {
+          "guid": "cNTO8UD6R6S2VZ4k9eKnqw",
+          "ctrlType": "b1.sdk.SubSection",
+          "groups": [
+            {
+              "guid": "Aq8obKDSTDySNr0XkOsOhQ",
+              "ctrlType": "b1.sdk.Group",
+              "items": [
+                {
+                  "guid": "OhYR2dJWRAS2OFH3Wf7Fzw",
+                  "ctrlType": "b1.sdk.StaticText",
+                  "value": "{@@i18n>copyRouteDialogLabel}"
+                }
+              ]
+            },
+            {
+              "guid": "WzEDSOCnRLSD5qqxwEgkgQ",
+              "ctrlType": "b1.sdk.Group",
+              "items": [
+                {
+                  "guid": "8Wjio225SEWE6x8L13otkQ",
+                  "ctrlType": "b1.sdk.Grid",
+                  "rowsData": "{@@data>/candidates}",
+                  "selectionMode": "Single",
+                  "addIndexColumn": true,
+                  "select": { "procName": "onSourceSelected" },
+                  "columns": [
+                    {
+                      "guid": "rmhtReB3S0e4TxhicI1yVw",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonItemNumber}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "f29wOlmmT4YgnHNSVp148w",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>ItemCode}"
+                      }
+                    },
+                    {
+                      "guid": "pEwO4oxrQ6u5A7BByhfCFQ",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>commonItemName}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "EedDIcGwRdOFsjg6P1y73w",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>ItemName}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "guid": "DJrjPoa3T23nmwa7yA8VnQ",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>commonOk}",
+      "icon": "sap-icon://accept",
+      "buttonType": "Emphasized",
+      "press": { "procName": "onConfirm" }
+    },
+    {
+      "guid": "kPTCdJJcRH6I32jyXsff9g",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>commonAbort}",
+      "buttonType": "Transparent",
+      "press": { "procName": "onCancel" }
+    }
+  ]
+}

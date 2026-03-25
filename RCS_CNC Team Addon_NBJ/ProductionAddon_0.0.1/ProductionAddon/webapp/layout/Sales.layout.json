@@ -1,0 +1,142 @@
+{
+    "controller": "SAPB1.ProductionAddon.ProductionAddon.controller.Sales",
+    "overlay": {
+        "after": [
+            {
+                "guid": "n3Fg9D2mzfXdxQd5jLdhsd",
+                "items": [
+                    {
+                        "guid": "X6YiWPMKRTqoreIy1riYDQ",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesCreateAllProductions}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onCreateAllProductions"
+                        }
+                    },
+                    {
+                        "guid": "nonlljwHSLKfXe5aQBW6DA",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesCreateProductionForLine}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onCreateProductionForLine"
+                        }
+                    },
+                    {
+                        "guid": "54OHhvDDRfWJJhCWOQZRqA",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesCancelAllProductions}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onCancelAllProductions"
+                        }
+                    },
+                    {
+                        "guid": "7dJEVJHeRyS2CecXXvrSvA",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesReleaseAll}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onReleaseAllProductions"
+                        }
+                    },
+                    {
+                        "guid": "sNXRzsVHStChGN21Hv8AEQ",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesFinishAll}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onFinishAllProductions"
+                        }
+                    },
+                    {
+                        "guid": "jlnd9tJJR2GduDYK5qwsTg",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesCopyRoute}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onCopyRoute"
+                        }
+                    },                    
+                    {
+                        "guid": "Q5bg8Dl0QC6Ma3U5UVMn0A",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesPlanUnlimited}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onPlanUnlimited"
+                        }
+                    },
+                    {
+                        "guid": "GsXOsf5gS62s9nUqRBaZBg",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesPlanLine}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onPlanLine"
+                        }
+                    },
+                    {
+                        "guid": "UDF_btnPlanRelease",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesPlanAll}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onPlanAll"
+                        }
+                    },
+                    {
+                        "guid": "oFJfhs4ITValcnYrsHTuNw",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesAttachCertificate}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onAttachCertificate"
+                        }
+                    },
+                    {
+                        "guid": "DwogUnKoRhCeMYFV2CMooA",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesShowCertificate}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onShowCertificate"
+                        }
+                    },
+                    {
+                        "guid": "kAvwhagURhysHl50FDef6Q",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesPrintProductionOrders}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onPrintProductionOrders"
+                        }
+                    },
+                    {
+                        "guid": "cmMn21eERx2hDPy2isB05Q",
+                        "ctrlType": "b1.sdk.Button",
+                        "text": "{@@i18n>layoutSalesPurchase}",
+                        "enabled": true,
+                        "visible": true,
+                        "press": {
+                            "procName": "onPurchase"
+                        }
+                    }                    
+                ]
+            }
+        ]
+    }
+}

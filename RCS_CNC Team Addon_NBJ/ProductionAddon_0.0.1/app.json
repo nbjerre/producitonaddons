@@ -1,0 +1,8 @@
+{
+  "applications": [
+    {
+      "name": "SAPB1.ProductionAddon.ProductionAddon",
+      "path": "ProductionAddon_0.0.1/ProductionAddon/webapp"
+    }
+  ]
+}

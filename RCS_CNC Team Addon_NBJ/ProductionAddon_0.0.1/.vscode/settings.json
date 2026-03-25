@@ -1,0 +1,5 @@
+{
+  "json.schemas": [],
+  "json.validate.enable": true,
+  "WebClient.debugServer.port": 8081
+}

@@ -1,0 +1,42 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CompanyDB" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ViggoHansen_V2_20250916</Value>
+    </Setting>
+    <Setting Name="DbServerType" Type="SAPbobsCOM.BoDataServerTypes" Scope="Application">
+      <Value Profile="(Default)">dst_MSSQL2019</Value>
+    </Setting>
+    <Setting Name="LicenseServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S10002508:30000</Value>
+    </Setting>
+    <Setting Name="Server" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">S10002508</Value>
+    </Setting>
+    <Setting Name="SBOUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">manager</Value>
+    </Setting>
+    <Setting Name="SBOPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1234</Value>
+    </Setting>
+    <Setting Name="UseTrusted" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="MaxPlanDays" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">120</Value>
+    </Setting>
+    <Setting Name="UserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ShowAllMessages" Type="System.Boolean" Scope="Application">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PieceProduction" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">180</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

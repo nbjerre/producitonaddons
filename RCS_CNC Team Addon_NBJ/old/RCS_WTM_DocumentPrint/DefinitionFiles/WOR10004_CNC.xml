@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+	<settings>
+		<useStandardLayout>Y</useStandardLayout>
+		<RTYPCode>WOR10004</RTYPCode>
+	</settings>
+	<variables>
+		<variable name="DocEntry" default="-1"></variable>
+	</variables>
+	<wtmSettings>
+		<keepCopy>
+		  <![CDATA[Y]]>
+		</keepCopy>
+		<documentFolder>
+		  <![CDATA[c:\Web\RCS_WTM_DocumentPrint_20120503\RCS_WTM_DocumentPrint\Log\]]>
+		</documentFolder>
+		<caseSql>
+		  <![CDATA[select caseID from athenawtm_newfaktura where id = [#DocEntry]]]>
+		</caseSql>
+		<fileName>
+		  <![CDATA[FAK[#DocEntry].pdf]]>
+		</fileName>
+	</wtmSettings>
+	
+</document>

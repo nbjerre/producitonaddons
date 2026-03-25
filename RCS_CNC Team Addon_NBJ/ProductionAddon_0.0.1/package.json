@@ -1,0 +1,32 @@
+{
+  "name": "ProductionAddon",
+  "version": "0.0.1",
+  "description": "A SAP Business One Web Client UIAPI App provided by SAPB1.",
+  "private": true,
+  "main": "index.js",
+  "keywords": [
+    "Extensibility",
+    "Web Client",
+    "SAP Business One"
+  ],
+  "scripts": {
+    "clean": "rimraf resources mta_archives mta-op*",
+    "build": "mbt build",
+    "start": "npm install && nodemon index.js"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-rimraf": "^1.0.0",
+    "gulp-uglify": "^3.0.2",
+    "mbt": "^1.2.27",
+    "gulp-ignore": "^3.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.0",
+    "requirejs": "^2.3.6",
+    "rimraf": "5.0.5",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

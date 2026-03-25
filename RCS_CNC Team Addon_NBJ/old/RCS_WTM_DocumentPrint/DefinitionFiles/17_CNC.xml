@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<document>
+  <settings>
+    <useStandardLayout>Y</useStandardLayout>
+    <RTYPCode>RDR2</RTYPCode>
+  </settings>
+	<variables>
+		<variable name="DocEntry" default="-1"></variable>
+	</variables>
+	
+</document>

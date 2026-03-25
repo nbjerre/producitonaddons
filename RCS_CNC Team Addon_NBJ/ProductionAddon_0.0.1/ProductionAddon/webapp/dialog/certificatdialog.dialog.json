@@ -1,0 +1,117 @@
+{
+  "guid": "QCA767J8TyuShDZbBKPJJQ",
+  "type": "Complex",
+  "controller": "SAPB1.ProductionAddon.ProductionAddon.controller.certificatdialogDialog",
+  "title": "{@@i18n>certificateDialogTitle}",
+  "contentWidth": "900px",
+  "contentHeight": "600px",
+  "tabs": [
+    {
+      "guid": "SiDQgwlqQs25H1oFTVbHpA",
+      "ctrlType": "b1.sdk.Section",
+      "text": "{@@i18n>certificateDialogSectionTitle}",
+      "subSections": [
+        {
+          "guid": "nuLSUm7ISea8Mq6WfdHk0g",
+          "ctrlType": "b1.sdk.SubSection",
+          "groups": [
+            {
+              "guid": "ItCAztnHQ9yA3CURdveCBA",
+              "ctrlType": "b1.sdk.Group",
+              "items": [
+                {
+                  "guid": "ozjxIvXlTVJAIvDusg3THg",
+                  "ctrlType": "b1.sdk.Grid",
+                  "rowsData": "{@@data>/certificates}",
+                  "selectionMode": "Multiple",
+                  "addIndexColumn": true,
+                  "columns": [
+                    {
+                      "guid": "fHbKhToqTqyFPMKg9tks5Q",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>certificateColumnStatus}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "nKwBEqc2RprMOdAC4ZC8LQ",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>statusLabel}"
+                      }
+                    },
+                    {
+                      "guid": "JmL5NQX5QSepVqoU6SYriA",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>certificateColumnNumber}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "EEmVhn3IRG6q2pfxbQGZXw",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>CerNo}"
+                      }
+                    },
+                    {
+                      "guid": "uRU22GosSoiYzXHxNS3VlQ",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>certificateColumnName}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "PSdoDzCZQGmL26vIlPKB7A",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>CerName}"
+                      }
+                    },
+                    {
+                      "guid": "zE5jayV1RDGxmtuUxtWcUg",
+                      "ctrlType": "b1.sdk.Column",
+                      "text": "{@@i18n>certificateColumnOrderNumber}",
+                      "defaultVisible": true,
+                      "template": {
+                        "guid": "w7r4kwNGTmG51wqgEE8Lxw",
+                        "ctrlType": "b1.sdk.StaticText",
+                        "value": "{@@data>OrderDocNum}"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "guid": "HizGC34CTlWpNzqxg0meqA",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>certificateDialogSearch}",
+      "icon": "sap-icon://search",
+      "press": { "procName": "onSearch" }
+    },
+    {
+      "guid": "G8y0M3jBTlGuuxFr4vpRsw",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>certificateDialogShowAll}",
+      "press": { "procName": "onShowAll" }
+    },
+    {
+      "guid": "g4jhL57KSoWzmJqm8tWh9w",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>certificateDialogFilterByOrder}",
+      "press": { "procName": "onFilterByOrder" }
+    },
+    {
+      "guid": "BjbQONsBQvOkzovgGdqCFQ",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>certificateDialogAttachSelected}",
+      "buttonType": "Emphasized",
+      "press": { "procName": "onAttach" }
+    },
+    {
+      "guid": "5JyIUe57Si2oCqm8lOzlaQ",
+      "ctrlType": "b1.sdk.Button",
+      "text": "{@@i18n>commonCancel}",
+      "buttonType": "Transparent",
+      "press": { "procName": "onClose" }
+    }
+  ]
+}
