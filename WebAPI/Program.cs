@@ -25,6 +25,9 @@ builder.Services.Configure<PrintSettings>(builder.Configuration.GetSection(Print
 // Add services
 builder.Services.AddSingleton<ISapConnectionService, SapConnectionService>();
 builder.Services.AddScoped<IServiceLayerService, ServiceLayerService>();
+builder.Services.AddScoped<IBomService, BomService>();
+builder.Services.AddScoped<IProductionOrderHierarchyService, ProductionOrderHierarchyService>();
+builder.Services.AddScoped<ISalesProductionPrintService, SalesProductionPrintService>();
 builder.Services.AddScoped<IPlanUnlimitedRunnerService, PlanUnlimitedRunnerService>();
 builder.Services.AddMemoryCache();
 
@@ -110,3 +113,5 @@ app.MapControllers();
 Log.Information("WebAPI started at {StartedAtUtc}", DateTime.UtcNow);
 
 app.Run();
+
+public partial class Program;

@@ -45,3 +45,21 @@ De fleste endpoints returnerer et JSON-objekt med et eller flere af disse felter
 - `error`: fejlbesked ved validerings- eller integrationsfejl
 
 Nogle endpoints returnerer ekstra statusfelter som `created`, `cancelled`, `released`, `finished`, `documentId`, `openUrl` eller detaljer fra eksterne processer.
+
+## Test Matrix (Eksamen)
+
+Denne aflevering fokuserer integrationstest på tre centrale flows:
+
+| Flow | Endpoint | Testfil | Hvad testes |
+|---|---|---|---|
+| Create-all | `POST /api/sales-production/create-all` | `Tests/WebAPI.Tests/Integration/CreateAllIntegrationTests.cs` | Gyldig salgsordrelinje giver oprettet produktionsordre (`created=true`, `createdCount=1`). |
+| Print | `POST /api/sales-production/print-production-orders` | `Tests/WebAPI.Tests/Integration/CrystalPrintIntegrationTests.cs` | 1) Ingen printable linjer giver `printableCount=0`. 2) Manglende Crystal-konfiguration returnerer tydelig Crystal-fejl. |
+| Plan-all | `POST /api/plan/order/btnpu` | `Tests/WebAPI.Tests/Integration/PlanUnlimitedIntegrationTests.cs` | Korrekt mapping til PlanUnlimited-knappen `BtnPU`. |
+
+### Kør tests
+
+```powershell
+dotnet test WebAPI/Tests/WebAPI.Tests/WebAPI.Tests.csproj -v minimal
+```
+
+Bemærk: testprojektet targeter `net10.0` og kræver en .NET 10 SDK.
